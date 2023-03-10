@@ -5,7 +5,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0
 COPY . /azure-relay-bridge/
 WORKDIR /azure-relay-bridge/src/azbridge
 RUN dotnet publish azbridge.csproj -c Release -f net6.0 -p:SelfContained=false -r ubuntu-x64  -p:PublishTrimmed=false -o /app
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+#ENTRYPOINT ["tail", "-f", "/dev/null"]
 #FROM mcr.microsoft.com/dotnet/runtime:6.0
 #EXPOSE 1583
 #ARG REVISION=0.6.0
