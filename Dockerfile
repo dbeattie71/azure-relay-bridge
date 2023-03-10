@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:6.0
 
+EXPOSE 1583
+EXPOSE 80
 # ENV http_proxy=http://proxy.corporation.example:8080
 # ENV https_proxy=http://proxy.corporation.example:8080
 COPY . /azure-relay-bridge/
