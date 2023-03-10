@@ -7,6 +7,7 @@ WORKDIR /azure-relay-bridge/src/azbridge
 RUN dotnet publish azbridge.csproj -c Release -f net6.0 -p:SelfContained=false -r ubuntu-x64  -p:PublishTrimmed=false -o /app
 
 FROM mcr.microsoft.com/dotnet/runtime:6.0
+EXPOSE 1583
 ARG REVISION=0.6.0
 ARG VERSION=0.6
 LABEL org.opencontainers.image.documentation="https://github.com/Azure/azure-relay-bridge/blob/master/README.md"
